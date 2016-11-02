@@ -16,54 +16,64 @@ public class Menu {
       int number2 = (int)(Math.random() * 10);
       int answer;
   
-      if (choice == 1) {
-        System.out.print("What is " + number1 + " + " + number2 + "? ");
-        answer = input.nextInt();
-        if (number1 + number2 == answer)
-          System.out.println("Correct");
-        else
-          System.out.println("Your answer is wrong. The correct answer is " 
-            + (number1 + number2));
-      }
-      else if (choice == 2) {
-        if (number1 < number2) { // Swap number1 with number2
-          int temp = number1;
-          number1 = number2;
-          number2 = temp;
-        }
+      switch(choice){
+        
+        case 1 :
+            System.out.print("What is " + number1 + " + " + number2 + "? ");
+            answer = input.nextInt();
+            if (number1 + number2 == answer)
+                System.out.println("Correct");
+            else
+                System.out.println("Your answer is wrong. The correct answer is " 
+                + (number1 + number2));
+                break;
+           
+        
+        case 2 :
+            if (number1 < number2) { // Swap number1 with number2
+                int temp = number1;
+                number1 = number2;
+                number2 = temp;
+            }
   
-        System.out.print("What is " + number1 + " - " + number2 + "? ");
-        answer = input.nextInt();
-        if (number1 - number2 == answer)
-          System.out.println("Correct");
-        else
-          System.out.println("Your answer is wrong. The correct answer is " 
-            + (number1 - number2));
-      }
-      else if (choice == 3) {
-        System.out.print("What is " + number1 + " * " + number2 + "? ");
-        answer = input.nextInt();
-        if (number1 * number2 == answer)
-          System.out.println("Correct");
-        else
-          System.out.println("Your answer is wrong. The correct answer is " 
-            + (number1 * number2));
-      }
-      else if (choice == 4) {
-        while (number2 == 0) 
-          number2 = (int)(Math.random() * 10);
+            System.out.print("What is " + number1 + " - " + number2 + "? ");
+            answer = input.nextInt();
+            if (number1 - number2 == answer)
+                System.out.println("Correct");
+            else
+                System.out.println("Your answer is wrong. The correct answer is " 
+                + (number1 - number2));
+            break;
+        
+      
+        case 3 :
+            System.out.print("What is " + number1 + " * " + number2 + "? ");
+            answer = input.nextInt();
+            if (number1 * number2 == answer)
+                System.out.println("Correct");
+            else
+                System.out.println("Your answer is wrong. The correct answer is " 
+                + (number1 * number2));
+            break;
+      
+        case 4 :
+            while (number2 == 0) 
+                number2 = (int)(Math.random() * 10);
   
         System.out.println("What is " + number1 + " / " + number2 + "? ");
         answer = input.nextInt();
+        
         if (number1 / number2 == answer)
-          System.out.println("Correct");
+            System.out.println("Correct");
         else
-          System.out.println("Your answer is wrong. The correct answer is " 
+            System.out.println("Your answer is wrong. The correct answer is " 
               + (number1 / number2));
-      }
-      else if (choice == 5)
         break;
-    }
+      
+        case 5: 
+            break;
+        
   }
 }
-
+}
+}
