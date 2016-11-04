@@ -9,6 +9,7 @@ public class Menu {
       System.out.println("3: Multiplication");
       System.out.println("4: Division");
       System.out.println("5: Exit");
+      System.out.println("6: Exit");
       System.out.print("Enter a choice: ");
       int choice = input.nextInt();
   
@@ -70,7 +71,7 @@ public class Menu {
               + (number1 / number2));
         break;
       
-        case 5: 
+        case 6: 
             break;
         
   }
